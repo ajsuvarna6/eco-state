@@ -1,6 +1,6 @@
+import { getCurrentState } from './lib/state';
+import { createListeners } from './lib/createListener';
+import { eventCreator } from './lib/eventCreator';
+import { registerToUpdate } from './lib/stateUpdateRegister';
 
-function printMsg() {
-    console.log("This is a message from the demo package");
-}
-
-export { printMsg };
+export { getCurrentState, createListeners, eventCreator, registerToUpdate };

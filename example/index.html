@@ -10,7 +10,16 @@
 </head>
 
 <body>
-    
+    <script>
+        ecoState.createListeners('localData', null, (state, action) => {
+            return {
+                date: action.payload
+            }
+        });
+        ecoState.registerToUpdate((state) => console.log('new data', state['localData']));
+        ecoState.eventCreator('localData', {payload: 423423})
+        ecoState.eventCreator('localData', {payload: 454})
+    </script>
 </body>
 
 </html>
