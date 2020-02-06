@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Eco State</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='../dist/eco-state.js'></script>
+</head>
+
+<body>
+    <script>
+        ecoState.createListeners('localData', null, (state, action) => {
+            return {
+                date: action.payload
+            }
+        });
+        ecoState.registerToUpdate((state) => console.log('new data', state['localData']));
+        ecoState.eventCreator('localData', {payload: 423423})
+        ecoState.eventCreator('localData', {payload: 454})
+    </script>
+</body>
+
+</html>
