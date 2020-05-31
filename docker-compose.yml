@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+    eco_state_docker:
+        # image: ubuntu
+        build: .
+        container_name: eco_state
+        ports:
+            - "8000:8000"
+        stdin_open: true
+        volumes:
+            - type: bind
+              source: .
+              target: /home/eco-state/
+        networks:
+            eco_state_net:
+                ipv4_address: 172.16.0.3
+
+networks:
+    eco_state_net:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.16.0.0/24
