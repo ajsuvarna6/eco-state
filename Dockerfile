@@ -14,4 +14,8 @@ RUN bash nodesource_setup.sh
 
 RUN apt install -y nodejs
 
+RUN node -v
+
+RUN npm i -g yarn
+
 WORKDIR /home/eco-state
