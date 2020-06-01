@@ -6,7 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Eco State</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script src='../dist/eco-state.js'></script>
+    <script src='../dist/eco-state.min.js'></script>
 </head>
 
 <body>
@@ -19,6 +19,10 @@
         ecoState.registerToUpdate((state) => console.log('new data', state['localData']));
         ecoState.eventCreator('localData', {payload: 423423})
         ecoState.eventCreator('localData', {payload: 454})
+        setTimeout(() => {
+            console.log('emitting');
+            ecoState.eventCreator('localData', {payload: 454333});
+        }, 3000);
     </script>
 </body>
 

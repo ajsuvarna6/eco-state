@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "NODE_ENV=development webpack --config webpack.config.js",
     "build:prod": "NODE_ENV=production webpack --config webpack.config.js",
-    "build": "npm run build:prod"
+    "build": "npm run build:prod",
+    "serve": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -26,14 +27,15 @@
   },
   "homepage": "https://github.com/ajsuvarna6/eco-state#readme",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-transform-runtime": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/runtime": "^7.5.5",
-    "babel-loader": "^8.0.6",
-    "terser-webpack-plugin": "^1.4.1",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/runtime": "^7.10.2",
+    "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.4",
+    "terser-webpack-plugin": "^3.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "browserslist": "> 0.25%, not dead"
 }
