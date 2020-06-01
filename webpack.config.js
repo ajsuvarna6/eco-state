@@ -21,6 +21,7 @@ module.exports = {
                 exclude: [
                     path.resolve(__dirname, "dist"),
                     path.resolve(__dirname, "config"),
+                    path.resolve(__dirname, "__test__"),
                     /node_modules/,
                 ],
                 loader: 'babel-loader',

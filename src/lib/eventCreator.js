@@ -6,7 +6,7 @@ import { getListeners } from './createListener';
  * 
  * @param {string} eventType 
  * @param {any} eventData 
- * @param {{function}} completionCallback 
+ * @param {function} completionCallback 
  */
 export async function eventCreator(eventType, eventData, completionCallback) {
     let eventTypeNewState = await getListeners()[eventType](getCurrentState()[eventType], eventData);

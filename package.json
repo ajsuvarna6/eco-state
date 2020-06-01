@@ -4,11 +4,14 @@
   "description": "Asynchronous light weight state management library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "NODE_ENV=development webpack --config webpack.config.js",
     "build:prod": "NODE_ENV=production webpack --config webpack.config.js",
     "build": "npm run build:prod",
-    "serve": "nodemon server.js"
+    "serve": "nodemon server.js",
+    "test:w": "jest --watchAll",
+    "test:c": "jest --coverage",
+    "test:wc": "jest --watchAll --coverage",
+    "test": "npm run test:c"
   },
   "repository": {
     "type": "git",
@@ -31,11 +34,32 @@
     "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/runtime": "^7.10.2",
+    "@types/jest": "^25.2.3",
     "babel-loader": "^8.1.0",
+    "jest": "^26.0.1",
     "nodemon": "^2.0.4",
     "terser-webpack-plugin": "^3.0.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
-  "browserslist": "> 0.25%, not dead"
+  "browserslist": "> 0.25%, not dead",
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "src/**/*.test.js"
+  ],
+  "coveragePathIgnorePatterns": [
+    "example",
+    "dist",
+    "node_modules",
+    "test-config",
+    "interfaces",
+    "jestGlobalMocks.ts",
+    ".module.ts",
+    ".mock.ts"
+  ],
+  "coverageDirectory": "<rootDir>/coverage/",
+  "transformIgnorePatterns": [
+    "<rootDir>/node_modules/(?!@ionic-native|@ionic|@ngrx|angular2-ui-switch|angularfire2|jest-cli|react|)"
+  ],
+  "verbose": false
 }
