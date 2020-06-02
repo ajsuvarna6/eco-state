@@ -1,7 +1,7 @@
 {
   "name": "eco-state",
-  "version": "0.0.1",
-  "description": "Asynchronous light weight state management library",
+  "version": "0.0.2",
+  "description": "Light Weight Asynchronous JavaScript Eco friendly State Management Library.",
   "main": "index.js",
   "scripts": {
     "build:dev": "NODE_ENV=development webpack --config webpack.config.js",
@@ -11,7 +11,8 @@
     "test:w": "jest --watchAll",
     "test:c": "jest --coverage",
     "test:wc": "jest --watchAll --coverage",
-    "test": "npm run test:c"
+    "test": "npm run test:c",
+    "postinstall": "npm run build && npm run build:dev"
   },
   "repository": {
     "type": "git",

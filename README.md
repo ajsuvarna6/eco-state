@@ -1,6 +1,6 @@
 # eco-state
 
-Light Weight Asynchronous State Management Library.
+Light Weight Asynchronous JavaScript Eco friendly State Management Library.
 
 # Install using npm
 
